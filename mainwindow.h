@@ -11,21 +11,21 @@ class MainWindow;
 
 class MainWindow : public QMainWindow
 {
-	Q_OBJECT
+  Q_OBJECT
 
 public:
-	explicit MainWindow(QWidget *parent = 0);
-	~MainWindow();
+  explicit MainWindow(QWidget *parent = 0);
+  ~MainWindow();
 
 private:
-	Ui::MainWindow *ui;
+  Ui::MainWindow *ui;
 
-	void write_calendar_header( FILE * pFile, QString calName );
-	void write_event( FILE * pFile, QString date );
-	void write_calendar_footer( FILE * pFile );
+  void write_calendar_header( FILE * pFile, QString calName );
+  void write_event( FILE * pFile, QString date );
+  void write_calendar_footer( FILE * pFile );
 
 private slots:
-	void saveButtonPressed(bool);
+  void saveButtonPressed(bool);
 
 };
 

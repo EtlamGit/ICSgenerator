@@ -11,28 +11,28 @@ class FormRecurrence;
 
 class FormRecurrence : public QWidget
 {
-	Q_OBJECT
+  Q_OBJECT
 
 public:
-	explicit FormRecurrence(QWidget *parent = 0);
-	~FormRecurrence();
+  explicit FormRecurrence(QWidget *parent = 0);
+  ~FormRecurrence();
 
-	int     getNumDates();
-	QString getDate( int idx );
+  int     getNumDates();
+  QString getDate( int idx );
 
 private:
-	Ui::FormRecurrence *ui;
+  Ui::FormRecurrence *ui;
 
 
-	// actions based on GUI interaction
+  // actions based on GUI interaction
 private slots:
-	void recurrenceSelectorChanged( const QString & text );
-	void recurrenceWeekdayChanged( int index );
-	void recurrenceMonthChanged( int index );
+  void recurrenceSelectorChanged( const QString & text );
+  void recurrenceWeekdayChanged( int index );
+  void recurrenceMonthChanged( int index );
 
-	void generateButtonPressed( bool checked );
+  void generateButtonPressed( bool checked );
 
-	void deleteItem();
+  void deleteItem();
 
 };
 
