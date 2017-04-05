@@ -27,6 +27,8 @@ public:
   bool    isEndTime();
   QTime   getEndTime();
   QString getEndTimeText();
+  bool    isClass();
+  QString getClass();
   bool    isComment();
   QString getComment();
   QString getTimeZone();

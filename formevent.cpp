@@ -79,6 +79,19 @@ QString FormEvent::getEndTimeText()
   return ui->timeEdit_End->text();
 }
 
+bool FormEvent::isClass()
+{
+  return ui->groupBox_Class->isChecked();
+}
+
+QString FormEvent::getClass()
+{
+  QStringList test1 = ui->comboBox_Class->currentText().split(',');
+  QString     test2 = test1.first();
+
+  return ui->comboBox_Class->currentText().split(' ').first();
+}
+
 bool FormEvent::isComment()
 {
   return ui->groupBox_Comment->isChecked();

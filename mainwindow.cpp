@@ -95,6 +95,7 @@ void MainWindow::write_event( FILE * pFile, QString datetext )
   QString eventEnd      = time1.toString("yyyyMMdd") + "T" + time1.toString("hhmmss") + "Z";
   QString eventTitle    = ui->widget_event->getTitle();
   QString eventLocation = ui->widget_event->getLocation();
+  QString eventClass    = ui->widget_event->getClass();
 
   uint hash = qHash( eventTitle + eventStart + eventEnd + eventLocation );
 
@@ -107,6 +108,8 @@ void MainWindow::write_event( FILE * pFile, QString datetext )
     fprintf( pFile, "DTEND:%s\n",   eventEnd.toUtf8().constData() );
   if (ui->widget_event->isLocation())
     fprintf( pFile, "LOCATION:%s\n", eventLocation.toUtf8().constData() );
+  if (ui->widget_event->isClass())
+    fprintf( pFile, "CLASS:%s\n", eventClass.toUtf8().constData() );
   fprintf( pFile, "END:VEVENT\n" );
 }
 

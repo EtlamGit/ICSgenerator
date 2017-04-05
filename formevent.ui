@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>256</width>
-    <height>368</height>
+    <width>195</width>
+    <height>453</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -105,6 +105,46 @@
          </item>
          <item>
           <widget class="QComboBox" name="comboBox_TimeZone"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_Class">
+        <property name="title">
+         <string>Confidence Classification</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="QComboBox" name="comboBox_Class">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <item>
+            <property name="text">
+             <string>PUBLIC (everything visible when shared)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>CONFIDENTIAL (only busy state visible when shared)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>PRIVATE (invisible when shared)</string>
+            </property>
+           </item>
+          </widget>
          </item>
         </layout>
        </widget>
